@@ -1,0 +1,41 @@
+type FeedbackElement @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  type: FeedbackElementEnum!
+  payload: AWSJSON!
+  template: Boolean!
+  feedbacktemplateID: ID @index(name: "byFeedbackTemplate")
+  feedbackID: ID @index(name: "byFeedback")
+}
+
+type FeedbackTemplate @model @auth(rules: [{allow: public}, {allow: private, operations: [read], provider: iam}, {allow: owner}, {allow: private}]) {
+  id: ID!
+  title: String!
+  code: String!
+  FeedbackElements: [FeedbackElement] @hasMany(indexName: "byFeedbackTemplate", fields: ["id"])
+  userID: ID! @index(name: "byUser")
+  Feedbacks: [Feedback] @hasMany(indexName: "byFeedbackTemplate", fields: ["id"])
+}
+
+type User @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID!
+  cognitoUserID: String
+  Feedbacks: [FeedbackTemplate] @hasMany(indexName: "byUser", fields: ["id"])
+  FeedbackTemplates: [FeedbackTemplate] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+enum FeedbackElementEnum {
+  MULTIPLE_CHOICE
+  QUESTION_ANSWER
+  SCALE
+  VALUE
+  WORDCLOUD
+}
+
+type Feedback @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID!
+  title: String!
+  userID: ID! @index(name: "byUser")
+  FeedbackElements: [FeedbackElement] @hasMany(indexName: "byFeedback", fields: ["id"])
+  feedbacktemplateID: ID! @index(name: "byFeedbackTemplate")
+}
+ 

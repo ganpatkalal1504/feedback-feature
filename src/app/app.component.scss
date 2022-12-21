@@ -1,0 +1,43 @@
+.header {
+    background-color: #fff;
+}
+
+.main {
+    width: 100%;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.plr-4 {
+    padding: 0 5%;
+}
+
+.menu {
+    font-size: 28px;
+    padding: 10px 0px 0px 30px;
+}
+
+@media (min-width: 576px) {
+    .pl-0 {
+        padding-left: 0;
+    }
+}
+
+.sidebar-menu {
+    display: block;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 922px) {
+    .sidebar-menu {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}

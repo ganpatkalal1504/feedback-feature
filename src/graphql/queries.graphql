@@ -1,0 +1,268 @@
+# this is an auto generated file. This will be overwritten
+query GetFeedbackElement($id: ID!) {
+  getFeedbackElement(id: $id) {
+    id
+    type
+    payload
+    template
+    feedbacktemplateID
+    feedbackID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListFeedbackElements(
+  $filter: ModelFeedbackElementFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFeedbackElements(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      type
+      payload
+      template
+      feedbacktemplateID
+      feedbackID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncFeedbackElements(
+  $filter: ModelFeedbackElementFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncFeedbackElements(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      type
+      payload
+      template
+      feedbacktemplateID
+      feedbackID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetFeedbackTemplate($id: ID!) {
+  getFeedbackTemplate(id: $id) {
+    id
+    title
+    code
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    userID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+query ListFeedbackTemplates(
+  $filter: ModelFeedbackTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFeedbackTemplates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      code
+      userID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncFeedbackTemplates(
+  $filter: ModelFeedbackTemplateFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncFeedbackTemplates(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      title
+      code
+      userID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    cognitoUserID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    FeedbackTemplates {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      cognitoUserID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncUsers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      cognitoUserID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetFeedback($id: ID!) {
+  getFeedback(id: $id) {
+    id
+    title
+    userID
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    feedbacktemplateID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListFeedbacks(
+  $filter: ModelFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFeedbacks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      userID
+      feedbacktemplateID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncFeedbacks(
+  $filter: ModelFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncFeedbacks(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      title
+      userID
+      feedbacktemplateID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}

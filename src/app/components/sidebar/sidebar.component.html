@@ -1,0 +1,21 @@
+<div class="sidebar expanded">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" />
+  </div>
+  <div class="content">
+    <div class="link">
+      <div class="content" [routerLink]="['/']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <i class="bi bi-speedometer2"></i>
+        </div>
+        <div class="title">Meine Umfragen</div>
+      </div>
+    </div>
+    <div class="link">
+      <div class="content" [routerLink]="['/feedback']" [routerLinkActive]="'active'">
+        <button type="button" class="btn btn-warning">+ Umfrage erstellen</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>

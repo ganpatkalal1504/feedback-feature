@@ -1,0 +1,256 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateFeedbackElement(
+  $input: CreateFeedbackElementInput!
+  $condition: ModelFeedbackElementConditionInput
+) {
+  createFeedbackElement(input: $input, condition: $condition) {
+    id
+    type
+    payload
+    template
+    feedbacktemplateID
+    feedbackID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateFeedbackElement(
+  $input: UpdateFeedbackElementInput!
+  $condition: ModelFeedbackElementConditionInput
+) {
+  updateFeedbackElement(input: $input, condition: $condition) {
+    id
+    type
+    payload
+    template
+    feedbacktemplateID
+    feedbackID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteFeedbackElement(
+  $input: DeleteFeedbackElementInput!
+  $condition: ModelFeedbackElementConditionInput
+) {
+  deleteFeedbackElement(input: $input, condition: $condition) {
+    id
+    type
+    payload
+    template
+    feedbacktemplateID
+    feedbackID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateFeedbackTemplate(
+  $input: CreateFeedbackTemplateInput!
+  $condition: ModelFeedbackTemplateConditionInput
+) {
+  createFeedbackTemplate(input: $input, condition: $condition) {
+    id
+    title
+    code
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    userID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+mutation UpdateFeedbackTemplate(
+  $input: UpdateFeedbackTemplateInput!
+  $condition: ModelFeedbackTemplateConditionInput
+) {
+  updateFeedbackTemplate(input: $input, condition: $condition) {
+    id
+    title
+    code
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    userID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+mutation DeleteFeedbackTemplate(
+  $input: DeleteFeedbackTemplateInput!
+  $condition: ModelFeedbackTemplateConditionInput
+) {
+  deleteFeedbackTemplate(input: $input, condition: $condition) {
+    id
+    title
+    code
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    userID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+  }
+}
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    cognitoUserID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    FeedbackTemplates {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    cognitoUserID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    FeedbackTemplates {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    cognitoUserID
+    Feedbacks {
+      nextToken
+      startedAt
+    }
+    FeedbackTemplates {
+      nextToken
+      startedAt
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateFeedback(
+  $input: CreateFeedbackInput!
+  $condition: ModelFeedbackConditionInput
+) {
+  createFeedback(input: $input, condition: $condition) {
+    id
+    title
+    userID
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    feedbacktemplateID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateFeedback(
+  $input: UpdateFeedbackInput!
+  $condition: ModelFeedbackConditionInput
+) {
+  updateFeedback(input: $input, condition: $condition) {
+    id
+    title
+    userID
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    feedbacktemplateID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteFeedback(
+  $input: DeleteFeedbackInput!
+  $condition: ModelFeedbackConditionInput
+) {
+  deleteFeedback(input: $input, condition: $condition) {
+    id
+    title
+    userID
+    FeedbackElements {
+      nextToken
+      startedAt
+    }
+    feedbacktemplateID
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

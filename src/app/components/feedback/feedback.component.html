@@ -1,0 +1,23 @@
+<p class="page-title">Feedback Form</p>
+<div class="feedback-container" *ngIf="!formSubmitted">
+    <div class="form-group mb-20">
+        <label for="title">Title</label>
+        <input [(ngModel)]="feedbackTitle" type="text" class="form-control title" id="title">
+    </div>
+    <label class="select-questions">Select questions</label>
+    <ng-container *ngFor="let element of feedbackElement; index as i">
+        <div *ngIf="!element._deleted">
+            <div class="form-check">
+                <input [value]="element.id" (change)="onCheck(element.id)" class="form-check-input" type="checkbox"
+                    value="" [id]="element.id">
+                <label class="form-check-label" [for]="element.id">{{ setPayload(element.payload).question
+                    }}</label>
+            </div>
+        </div>
+    </ng-container>
+    <button (click)="submitFeedbackForm()" class="btn btn-primary mt-20">Submit <i
+            class="bi bi-arrow-right"></i></button>
+</div>
+<div class="feedback-fillout" *ngIf="formSubmitted">
+    <button (click)="redirectToFillout()" class="btn btn-primary">Feedback Fillout</button>
+</div>

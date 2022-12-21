@@ -1,0 +1,27 @@
+.header-container {
+    padding: 10px 15px;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+
+    .message {
+        i {
+            font-size: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .profile {
+        text-align: center;
+
+        i:nth-child(1) {
+            font-size: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        i:nth-child(2) {
+            font-size: 15px;
+        }
+    }
+}

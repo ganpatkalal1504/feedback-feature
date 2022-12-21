@@ -1,0 +1,19 @@
+<!-- <amplify-authenticator>
+  <ng-template amplifySlot="authenticated" let-user="user" let-signOut="signOut"> -->
+<div class="row main">
+  <div class="col-md-2 col-sm-2 col-2 bg-white sidebar-menu">
+    <sidebar></sidebar>
+  </div>
+  <div (click)="setSidebar()" class="col-md-2 col-sm-2 col-2 bg-white menu">
+    <i class="bi bi-list"></i>
+  </div>
+  <div class="col-md-10 col-sm-10 col-10 pl-0">
+    <header class="header"></header>
+    <div class="container plr-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- <button (click)="signOut()">Sign Out</button>
+  </ng-template>
+</amplify-authenticator> -->

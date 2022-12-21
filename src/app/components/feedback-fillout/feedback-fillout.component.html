@@ -1,0 +1,8 @@
+<div class="feedback-fillout-container">
+    <p class="page-title"> {{ title }} </p>
+    <p *ngIf="formSubmitted" class="form-check-label feedback-fillout"> Feedback submitted successfully! Redirecting on home page in 5 seconds...</p>
+    <form *ngIf="!formSubmitted" [formGroup]="form" (ngSubmit)="submitFeedbackFillout(form.value)">
+        <dynamic-form-builder [formGroup]="form" [fields]="mapedFeedbackElements"></dynamic-form-builder>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Save</button>
+    </form>
+</div>

@@ -1,0 +1,7 @@
+body {
+    background-color: #F8F9FB !important;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import '~@aws-amplify/ui-angular/theme.css';
